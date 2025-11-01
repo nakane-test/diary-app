@@ -1,0 +1,19 @@
+{
+  "name": "📔 日記アプリ",
+  "short_name": "日記",
+  "description": "今日の出来事や気持ちを記録する日記アプリ",
+  "start_url": "/diary-app/",
+  "display": "standalone",
+  "background_color": "#667eea",
+  "theme_color": "#667eea",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/diary-app/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
+
