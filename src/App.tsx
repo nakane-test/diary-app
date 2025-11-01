@@ -59,7 +59,7 @@ function App() {
           <div className="form-group">
             <textarea
               className="textarea-content"
-              placeholder="今日の出来事や気分を書こう..."
+              placeholder="今日の出来事や気分を書こう...！"
               value={content}
               onChange={(e) => setContent(e.target.value)}
               rows={8}
