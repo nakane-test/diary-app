@@ -58,15 +58,16 @@ self.addEventListener('notificationclick', (event) => {
 const scheduleDailyNotification = async () => {
   const now = new Date();
   const targetTime = new Date();
-  targetTime.setHours(23, 0, 0, 0); // 23:00
+  targetTime.setHours(0, 15, 0, 0); // 0:15（テスト用）
 
-  // 今日の23:00が過ぎていたら明日の23:00にする
+  // 今日の0:15が過ぎていたら明日の0:15にする
   if (now >= targetTime) {
     targetTime.setDate(targetTime.getDate() + 1);
   }
 
   const timeUntilNotification = targetTime - now;
-  console.log(`Service Worker: ${Math.floor(timeUntilNotification / 1000 / 60 / 60)}時間後に通知をスケジュール`);
+  const minutes = Math.floor(timeUntilNotification / 1000 / 60);
+  console.log(`Service Worker: ${minutes}分後に通知をスケジュール（テスト用）`);
 
   // タイムアウトを設定
   setTimeout(() => {
